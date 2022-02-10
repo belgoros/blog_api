@@ -7,5 +7,6 @@ defmodule BlogApiWeb.Router do
 
   scope "/api", BlogApiWeb do
     pipe_through :api
+    resources "/posts", PostController, except: [:new, :edit]
   end
 end
